@@ -7,11 +7,13 @@ Utilizes data on steamdb.info to return a list of a Steam App's build/version nu
 // Usage:
 getSteamAppBuildInfo( appId, callback );
 
-// Example:
+// Examples:
+getSteamAppBuildInfo( 582660,  console.log )
+// or
 getSteamAppBuildInfo( 582660, ( builds ) => {
-		if (builds.length > 0 )
-			console.log( builds[0] );
-		else
-			console.log( 'Error fetching appid build info' )
-	} );
+	if (builds.length > 0 )
+		console.log( builds[0] );
+	else
+		console.log( 'Error fetching appid build info' )
+} );
 ```
