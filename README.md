@@ -3,10 +3,12 @@ Utilizes data on steamdb.info to return a list of a Steam App's build/version nu
 
 ```js
 // Usage:
-getSteamAppBuildInfo( appId, callback );
+getSteamAppBuildInfo ( appId, callback );
 
-// Examples:
-getSteamAppBuildInfo( 582660,  console.log )
+// #Examples:
+
+// Prints array of all BuildInfo class objects
+getSteamAppBuildInfo ( 582660,  console.log );
 
 // returns:
 [ BuildInfo {
@@ -28,11 +30,13 @@ getSteamAppBuildInfo( 582660,  console.log )
   ... { ... }
 ]
 
-getSteamAppBuildInfo( 582660, ( builds ) => {
-    if (builds.length > 0 )
-        console.log( builds[0] );
+
+// Prints the first (most current buildId/version) BuildInfo object
+getSteamAppBuildInfo ( 582660, ( builds ) => {
+    if ( builds.length > 0 )
+        console.log ( builds[0] );
     else
-        console.log( 'Error fetching appid build info' )
+        console.log ( 'Error fetching appid build info' )
 } );
 
 // returns:
