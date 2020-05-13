@@ -11,9 +11,9 @@ getSteamAppBuildInfo( appId, callback );
 getSteamAppBuildInfo( 582660,  console.log )
 // or
 getSteamAppBuildInfo( 582660, ( builds ) => {
-	if (builds.length > 0 )
-		console.log( builds[0] );
-	else
-		console.log( 'Error fetching appid build info' )
+    if (builds.length > 0 )
+        console.log( builds[0] );
+    else
+        console.log( 'Error fetching appid build info' )
 } );
 ```
