@@ -9,11 +9,22 @@ getSteamAppBuildInfo( appId, callback );
 
 // Examples:
 getSteamAppBuildInfo( 582660,  console.log )
-// or
+
 getSteamAppBuildInfo( 582660, ( builds ) => {
     if (builds.length > 0 )
         console.log( builds[0] );
     else
         console.log( 'Error fetching appid build info' )
 } );
+
+/* returns:
+BuildInfo {
+  appId: '582660',
+  buildId: '4960487',
+  patchTitle: 'Patch Notes - April 29th 2020',
+  dateString: '29 April 2020',
+  unixEpochDate: 1588132800000,
+  hasOfficialPatchNotes: true,
+  hasCommunityPatchNotes: true }
+*/
 ```
