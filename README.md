@@ -3,9 +3,10 @@ Utilizes data on steamdb.info to return a list of a Steam App's build/version nu
 
 
 ## Requirements (for NodeJs usage):
+```
 "xmlhttprequest" node package
-
 "dom-parser" node package
+```
 
 
 ## Code and stuff:
