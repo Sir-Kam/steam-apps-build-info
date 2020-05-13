@@ -10,6 +10,50 @@ getSteamAppBuildInfo( appId, callback );
 // Examples:
 getSteamAppBuildInfo( 582660,  console.log )
 
+// returns:
+[ BuildInfo {
+    appId: '582660',
+    buildId: '4960487',
+    patchTitle: 'Patch Notes - April 29th 2020',
+    dateString: '29 April 2020',
+    unixEpochDate: 1588132800000,
+    hasOfficialPatchNotes: true,
+    hasCommunityPatchNotes: true },
+  BuildInfo {
+    appId: '582660',
+    buildId: '4960315',
+    patchTitle: true,
+    dateString: '29 April 2020',
+    unixEpochDate: 1588132800000,
+    hasOfficialPatchNotes: true,
+    hasCommunityPatchNotes: true },
+  BuildInfo {
+    appId: '582660',
+    buildId: '4959772',
+    patchTitle: true,
+    dateString: '29 April 2020',
+    unixEpochDate: 1588132800000,
+    hasOfficialPatchNotes: true,
+    hasCommunityPatchNotes: true },
+  BuildInfo {
+    appId: '582660',
+    buildId: '4958714',
+    patchTitle: true,
+    dateString: '29 April 2020',
+    unixEpochDate: 1588132800000,
+    hasOfficialPatchNotes: true,
+    hasCommunityPatchNotes: true },
+  BuildInfo {
+    appId: '582660',
+    buildId: '4930708',
+    patchTitle: true,
+    dateString: '23 April 2020',
+    unixEpochDate: 1587614400000,
+    hasOfficialPatchNotes: true,
+    hasCommunityPatchNotes: true },
+  ... { ... }
+]
+
 getSteamAppBuildInfo( 582660, ( builds ) => {
     if (builds.length > 0 )
         console.log( builds[0] );
