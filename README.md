@@ -1,6 +1,12 @@
 # steam-apps-build-info
 Utilizes data on steamdb.info to return a list of a Steam App's build/version numbers and info
 
+
+## Requirements (for NodeJs usage):
+"xmlhttprequest" node package
+"dom-parser" node package
+
+
 ## Code and stuff:
 ```js
 // Usage:
