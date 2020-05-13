@@ -17,7 +17,7 @@ getSteamAppBuildInfo( 582660, ( builds ) => {
         console.log( 'Error fetching appid build info' )
 } );
 
-/* returns:
+// returns:
 BuildInfo {
   appId: '582660',
   buildId: '4960487',
@@ -26,5 +26,4 @@ BuildInfo {
   unixEpochDate: 1588132800000,
   hasOfficialPatchNotes: true,
   hasCommunityPatchNotes: true }
-*/
 ```
