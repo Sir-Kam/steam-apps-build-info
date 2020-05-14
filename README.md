@@ -1,13 +1,13 @@
 # steam-apps-build-info
 Utilizes data on steamdb.info to return a list of a Steam App's build/version numbers and info.
 
-Using an http get request to the site to get the html that'll be put into a DOM parser, iterated though the elements of the html, map the table data to a structured object for each row, and return all objects (representing all of the app's build/version/patche infos) in an array.
+Using an http get request to the site to get the html that'll be put into a DOM parser. Then iterate though the elements of the html, map the table data found to a structured object for each row, and return all objects (representing all of the app's build/version/patche infos) in an array.
 
 
 ## About
-Run code either though NodeJs environment, or in a non-NodeJs environment where ever there is support for JS to be evaled though a WebBrowser or WebClient (like the many available c# libs for WebBrowsers, for example). 
+Run code either though NodeJs environment, or in a non-NodeJs environment where ever there is support for JS to be evaled though a WebBrowser or WebClient (like the many available c# libs for WebBrowsers, for example).
 
-Panning on future conversion to have a C# adaptation of the code. 
+Panning on future conversion to have a C# adaptation of the code.
 
 ## NodeJs Usage Requirements:
 ```
