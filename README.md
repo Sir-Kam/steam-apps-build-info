@@ -2,7 +2,12 @@
 Utilizes data on steamdb.info to return a list of a Steam App's build/version numbers and info
 
 
-## Requirements (for NodeJs usage):
+## About
+Run code either though NodeJs environment, or in a non-NodeJs environment where ever there is support for JS to be evaled though a WebBrowser or WebClient (like the many available c# libs for WebBrowsers, for example). 
+
+Panning on future conversion to have a C# adaptation of the code. 
+
+## NodeJs Usage Requirements:
 ```
 "xmlhttprequest" node package
 "dom-parser" node package
