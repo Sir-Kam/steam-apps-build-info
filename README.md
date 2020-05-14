@@ -1,5 +1,6 @@
 # steam-apps-build-info
-Utilizes data on steamdb.info to return a list of a Steam App's build/version numbers and info.\n
+Utilizes data on steamdb.info to return a list of a Steam App's build/version numbers and info.
+
 Using an http get request to the site to get the html that'll be put into a DOM parser, iterated though the elements of the html, map the table data to a structured object for each row, and return all objects (representing all of the app's build/version/patche infos) in an array.
 
 
