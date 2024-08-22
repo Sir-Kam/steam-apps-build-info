@@ -1,6 +1,6 @@
 /* [Cam A.] @Sir-Kam (https://github.com/Sir-Kam) */
 /* getSteamAppBuildInfo */
-/* function def, get information on a Steam App's builds/versions */
+/* Function Def, get information on a Steam App's builds/versions */
 /*  generalized to give support for usage in both in NodeJs and not (CORS of course though) */
 const getSteamAppBuildInfo = function (appid, cb) {
     /* determine what environment the code is being ran */
@@ -92,23 +92,6 @@ const getSteamAppBuildInfo = function (appid, cb) {
                         /* Whether there was community released patch notes for this build/version/update/patch */
                         av[2]
                     );
-                    /* comment the above return and uncomment this to just use a javascript object instead of class */
-                    /* 
-				return {
-					// parse 1st col in row text to Date as unix epoch
-				'unixtime': av[0] ? Date.parse(av[0]) : -1,
-				  // 1st col text as date string
-				  'date': av[0] ? av[0] : '',
-				  // 2nd col text as patch title, or blank if none
-				  'title': av[1] ? av[1] : '',
-				  // 3rd col is true if patch included community patch notes
-				  'hasCommunityPatchNotes': av[2],
-				  // 4th col is true if patch included official patch notes
-				  'hasOfficialPatchNotes': av[3],
-				  // 5th col is the buildid number or the app version
-				  'buildid': av[4]
-			  }
-			  */
                 });
             /* invoke callback function with array of resulting objects containing data on all listed patches */
             cb(buildsList);
@@ -117,13 +100,14 @@ const getSteamAppBuildInfo = function (appid, cb) {
     gSABI(appid, cb);
 };
 
-/* usage: getSteamAppBuildID ( appId, callbackFunc ); */
+/* Usage: getSteamAppBuildID(appId, callbackFunc); */
 getSteamAppBuildInfo(582660, (builds) => {
-	/* return value of null could mean NodeJs package issues or some other unhandled error,
-	   whereas an empty array could mean an issue loading the page or parsing/filtering the html */
+    /*
+    return value of null could mean NodeJs package issues or some other unhandled error,
+    whereas an empty array could mean an issue loading the page or parsing/filtering the html
+    */
     if (builds !== null && builds.length > 0)
         console.log(builds[0]);
     else
-        console.log(`Error@: Attempting to fetch appid build info =>
-					 	function returned ${ builds == null ? 'null' : 'no items' } :(`);
+        console.log(`Error@: Attempting to fetch appid build info =>\n\t\tfunction returned ${builds == null ? 'null' : 'no items'} :(`);
 });
